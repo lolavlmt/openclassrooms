@@ -8,7 +8,7 @@
   <body>
     <h1>Les bases en html</h1>
     <h2>La structure de base</h2>
-    Voici une page vierge :
+    <p>Voici une page vierge :</p>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="Milalea" data-slug-hash="ExNbVvv" style="height: 357px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Base Html">
       <span>See the Pen <a href="https://codepen.io/Milalea/pen/ExNbVvv">
@@ -17,6 +17,26 @@
     </p>
     
     <h2>Les blocs HTML5</h2>
+    <p>Les principales balises html pour organiser le contenu</p>
+    <code>
+      <header>Un logo, le menu de navigation (<nav>), etc.</header>
+      <main> <!-- Élément unique par page, il contient le contenu principal variant d’une page à l’autre. -->
+        <h1>Le titre de la page</h1>
+        <section>
+          <h2>Le titre de la section</h2>
+          <article>
+            <h3>Le titre de l'article</h3>
+            <p>Le résumé de l'article</p>
+            <aside> <!-- Son contenu est un complément par rapport à ce qui l'entoure, qui n'est pas forcément en lien direct avec le contenu mais qui peut apporter des informations supplémentaires. -->
+              <p>Aparté</p>
+            </aside>
+          </article>
+        </section>
+      </main>
+      <footer><!-- Tout comme la balise <header>, elle peut être utilisée au sein d'une <section> ou d'un <article>  -->
+        Pied de page
+      </footer>
+    </code>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
   </body>
 </html>
