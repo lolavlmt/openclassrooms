@@ -36,16 +36,15 @@
       </code></pre>
       
       <h2>Les types de variables</h2>
-      <p>Le dernier standard ECMAScript définit 8 types de données :</p>
+      <p>Les types de données les plus courants :</p>
       <ul>
         <li>Chaîne de caractères (String)</li>
         <li>Nombre</li>
         <li>Booléen</li>
         <li>Null</li>
         <li>Undefined</li>
-        <li>BigInt (proposition pour ES2020)</li>
-        <li>Symbole (type introduit avec ECMAScript 6)</li>
         <li>Objet</li>
+        <li>Function</li>
       </ul>
       <p><b>Exemples :</b></p>
       <pre class="language-js"><code>
@@ -57,6 +56,9 @@
         let myBoolean2 = false;
         let myNull = null;
         let myUndefined = undefined;
+        let myFunc = function(){
+          console.log("hello");
+        };
         
         console.log(typeof myString); // Permet de vérifier le type de donnée
       </code></pre>
