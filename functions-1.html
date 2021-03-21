@@ -12,8 +12,29 @@
     <main class="container">
       <h1>Exercices sur les fonctions</h1>
       <h2>Introduction</h2>
-      <p>Pour chaque exercice, il faudra créer une fonction pour éviter les duplications.</p>
-      <p>Aucune recherche Google ou autre n'est nécessaire. Son utilisation est donc innterdite.</p>
+      <p>Pour chaque exercice, il faudra créer une fonction pour éviter les duplications de code.</p>
+      <p>Aucune recherche Google ou autre n'est nécessaire. Son utilisation est donc interdite.</p>
+
+      <p><strong>Voici un exemple de consigne :</strong></p>
+      <p>Code à améliorer :</p>
+      <pre class="language-js"><code>
+  console.log('Jean a 10ans');
+  console.log('Jacques a 10ans');
+  console.log('Pierre a 10ans');
+      </code></pre>
+
+      <p><strong>Voici un exemple de solution attendue :</strong></p>
+      <pre class="language-js"><code>
+  function display(name) {
+    console.log(name+' a 10ans');
+  }
+  display('Jean');
+  display('Jacques');
+  display('Pierre');
+      </code></pre>
+      <p>Il faudra appliquer cette <b>même méthodologie</b> sur chacun des exercices suivants.</p>
+      
+      <h2>Exercices</h2>
       <p>Le code html de base sera toujours le suivant :</p>
       <pre class="language-markup"><code>
   &lt;div id="element1"&gt;Element 1&lt;/div&gt;
@@ -21,69 +42,58 @@
   &lt;div id="element3"&gt;Element 3&lt;/div&gt;
       </code></pre>
 
-      <p><strong>Voici un exemple de consigne :</strong></p>
-      <p>Code à améliorer :</p>
-      <pre class="language-js"><code>
-        console.log('Jean a 10ans');
-        console.log('Jacques a 10ans');
-        console.log('Pierre a 10ans');
-      </code></pre>
-
-      <p><strong>Voici un exemple de solution attendue :</strong></p>
-      <pre class="language-js"><code>
-        function display(name) {
-          console.log(name+' a 10ans');
-        }
-        display('Jean');
-        display('Jacques');
-        display('Pierre');
-      </code></pre>
-      
-      <h2>Exercices</h2>
       <h3>Exercice 1</h3>
       <p>Code à améliorer :</p>
       <pre class="language-js"><code>
-        document.getElementById('element1').style.color = "red";
-        document.getElementById('element2').style.color = "red";
-        document.getElementById('element3').style.color = "red";
+  document.getElementById('element1').innerHTML = "1er changement de texte";
+  document.getElementById('element1').innerHTML = "2ème changement de texte";
+  document.getElementById('element1').innerHTML = "3ème changement de texte";
       </code></pre>
       
       <h3>Exercice 2</h3>
       <p>Code à améliorer :</p>
       <pre class="language-js"><code>
-        document.getElementById('element1').innerHTML = "Lorem";
-        document.getElementById('element1').innerHTML = "ipsum";
-        document.getElementById('element1').innerHTML = "dolor";
+  document.getElementById('element1').style.color = "red";
+
+  document.getElementById('element2').style.color = "red";
+
+  document.getElementById('element3').style.color = "red";
       </code></pre>
       
       <h3>Exercice 3</h3>
       <p>Code à améliorer :</p>
       <pre class="language-js"><code>
-        document.getElementById('element1').innerHTML = "Lorem";
-        document.getElementById('element2').innerHTML = "ipsum";
-        document.getElementById('element3').innerHTML = "dolor";
+  document.getElementById('element1').innerHTML = "Lorem";
+
+  document.getElementById('element2').innerHTML = "ipsum";
+
+  document.getElementById('element3').innerHTML = "dolor";
       </code></pre>
       
       <h3>Exercice 4</h3>
       <p>Code à améliorer :</p>
       <pre class="language-js"><code>
-        document.getElementById('element1').innerHTML = "Lorem";
-        document.getElementById('element1').style.fontWeight = "bold";
-        document.getElementById('element2').innerHTML = "ipsum";
-        document.getElementById('element2').style.fontWeight = "bold";
-        document.getElementById('element3').innerHTML = "dolor";
-        document.getElementById('element3').style.fontWeight = "bold";
+  document.getElementById('element1').innerHTML = "Lorem";
+  document.getElementById('element1').style.fontWeight = "bold";
+  
+  document.getElementById('element2').innerHTML = "ipsum";
+  document.getElementById('element2').style.fontWeight = "bold";
+  
+  document.getElementById('element3').innerHTML = "dolor";
+  document.getElementById('element3').style.fontWeight = "bold";
       </code></pre>
 
       <h3>Exercice 5</h3>
       <p>Code à améliorer :</p>
       <pre class="language-js"><code>
-        document.getElementById('element1').innerHTML = "Lorem";
-        document.getElementById('element1').style.color = "red";
-        document.getElementById('element2').innerHTML = "ipsum";
-        document.getElementById('element2').style.color = "blue";
-        document.getElementById('element3').innerHTML = "dolor";
-        document.getElementById('element3').style.color = "green";
+  document.getElementById('element1').innerHTML = "Lorem";
+  document.getElementById('element1').style.color = "red";
+
+  document.getElementById('element2').innerHTML = "ipsum";
+  document.getElementById('element2').style.color = "blue";
+  
+  document.getElementById('element3').innerHTML = "dolor";
+  document.getElementById('element3').style.color = "green";
       </code></pre>
     </main>
 
