@@ -13,7 +13,7 @@
       <h1>Exercices sur les fonctions</h1>
       <h2>Introduction</h2>
       <p>Pour chaque exercice, il faudra créer une fonction pour éviter les duplications de code.</p>
-      <p>Aucune recherche Google ou autre n'est nécessaire. Son utilisation est donc interdite.</p>
+      <p>Aucune recherche Google ou autre n'est nécessaire. Son utilisation est donc <b>interdite</b>.</p>
 
       <p><strong>Voici un exemple de consigne :</strong></p>
       <p>Code à améliorer :</p>
@@ -32,7 +32,39 @@
   display('Jacques');
   display('Pierre');
       </code></pre>
-      <p>Il faudra appliquer cette <b>même méthodologie</b> sur chacun des exercices suivants.</p>
+      <p><strong>Conseils</strong></p>
+      <p><strong>Etape 1 :</strong></p>
+      <p>Bien observer les éléments communs à chaque ligne (en vert ci-dessous), et ceux qui diffèrent (en rouge).</p>
+      <code>
+  <span style="color: 'green'">console.log('</span><span style="color: 'red'">Jean</span><span style="color: 'green'"> a 10ans');</span>
+  <span style="color: 'green'">console.log('</span><span style="color: 'red'">Jacques</span><span style="color: 'green'"> a 10ans');</span>
+  <span style="color: 'green'">console.log('</span><span style="color: 'red'">Pierre</span><span style="color: 'green'"> a 10ans');</span>
+      </code>
+      <p><strong>Etape 2 :</strong></p>
+      <p>Créer une fonction, et y mettre le code commun</p>
+      <pre class="language-js"><code>
+  function display() {
+    console.log(' a 10ans');
+  }
+      </code></pre>
+      <p><strong>Etape 3 :</strong></p>
+      <p>Remplacer le code qui diffère, par un paramètre</p>
+      <pre class="language-js"><code>
+  function display(name) {
+    console.log(name+' a 10ans');
+  }
+      </code></pre>
+      <p><strong>Etape 4 :</strong></p>
+      <p>Appeler la fonction pour qu'elle soit exécutée, avec les bons paramètres</p>
+      <pre class="language-js"><code>
+  function display(name) {
+    console.log(name+' a 10ans');
+  }
+  display('Jean');
+  display('Jacques');
+  display('Pierre');
+      </code></pre>
+      <p>Il faudra appliquer cette <b<u>>même méthodologie</u></b> sur chacun des exercices suivants.</p>
       
       <h2>Exercices</h2>
       <p>Le code html de base sera toujours le suivant :</p>
