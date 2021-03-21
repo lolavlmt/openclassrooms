@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Base Html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Les bases en html</h1>
+      <h2>La structure de base</h2>
+      <p>Voici une page vierge :</p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="Milalea" data-slug-hash="ExNbVvv" style="height: 357px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Base Html">
+        <span>See the Pen <a href="https://codepen.io/Milalea/pen/ExNbVvv">
+        Base Html</a> by Lola (<a href="https://codepen.io/Milalea">@Milalea</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+
+      <h2>Les blocs HTML5</h2>
+      <p>Les principales balises html pour organiser le contenu</p>
+      <pre class="language-markup"><code>
+        &lt;header&gt;Un logo, le menu de navigation (&lt;nav&gt;), etc.&lt;/header&gt;
+        &lt;main&gt; &lt;!-- Élément unique par page, il contient le contenu principal variant d’une page à l’autre. --&gt;
+          &lt;h1&gt;Le titre de la page&lt;/h1&gt;
+          &lt;section&gt;
+            &lt;h2&gt;Le titre de la section&lt;/h2&gt;
+            &lt;article&gt;
+              &lt;h3&gt;Le titre de l'article&lt;/h3&gt;
+              &lt;p&gt;Le résumé de l'article&lt;/p&gt;
+              &lt;aside&gt; &lt;!-- Son contenu est un complément par rapport à ce qui l'entoure, qui n'est pas forcément en lien direct avec le contenu mais qui peut apporter des informations supplémentaires. --&gt;
+                &lt;p&gt;Aparté&lt;/p&gt;
+              &lt;/aside&gt;
+            &lt;/article&gt;
+          &lt;/section&gt;
+        &lt;/main&gt;
+        &lt;footer&gt;&lt;!-- Tout comme la balise &lt;header&gt;, elle peut être utilisée au sein d'une &lt;section&gt; ou d'un &lt;article&gt;  --&gt;
+          Pied de page
+        &lt;/footer&gt;
+      </code></pre>
+
+      <h2>Utilisation de class et id</h2>
+      <p>Les attributs class et id, permettent d'identifier, de sélectionner, précisément un élément, pour pouvoir lui ajouter du style en css ou le manipuler en js.</p>
+      <p>L'attribut class est à privilégier autant que possible.</p>
+      <p>L'attribut id peut être utilisé pour faire une ancre, ou au sein des formulaires.</p>
+      <p>Attention, on ne nomme pas les id et les classes avec des accents, des espaces et on ne commence pas par un chiffre. On peut jouer sur la casse, les traits d’union ou les tirets bas (exemple : myBlock, my-block, my_bloc).</p>
+      <p>Par convention, on nomme les id et les classes en anglais.</p>
+
+      <h3>Les ID</h3>
+      <p>ID est un <strong>identifiant unique</strong>. Il ne peut être attribué qu'une seul fois au sein d'une page.</p>
+      <p>Un élément ne peut avoir qu'un seul id.</p>
+      <p>!//TODO intégrer un exemple d'ancre</p>
+
+      <h3>Les class</h3
+      <p>Un élément peut avoir plusieurs classes. On les sépare à l’aide d’une espace.</p>
+      <pre class="language-markup"><code>
+        &lt;div class="article article-sport"&gt;&lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;&lt;/div&gt;
+      </code></pre>
+
+      <h2>Sources</h2>
+      <a href="https://jenseign.com/apprendre-html-css/documentation-theorie/la-structure-dune-page/" target="_blank">https://jenseign.com/apprendre-html-css/documentation-theorie/la-structure-dune-page/</a>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  </body>
+</html>
