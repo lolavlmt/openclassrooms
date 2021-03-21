@@ -17,7 +17,7 @@
       <p>Il existe trois types de déclarations de variable en JavaScript :</p>
       <ul>
         <li><b>let</b> : la plus utilisée</li>
-        <li><b>const</b> : la valeur ne pourra pas être modifié</li>
+        <li><b>const</b> : la valeur ne pourra pas être modifiée</li>
         <li><b>var</b> : très proche de let, et de moins en moins utilisé</li>
       </ul>
       <p><b>Exemples :</b></p>
@@ -32,7 +32,7 @@
   const myConst = "ma première constante"; // Initialiser la constante en lui attribuant une valeur (c'est obligatoire pour une constante)
   myConst = "cela va générer une erreur"; // Il n'est pas possible de modifier une constante. Le script s'arrêtera ici et affichera une erreur dans la console.
   const myNumberConst = 3.4;
-  const myBoolean = false;
+  const myBooleanConst = false;
       </code></pre>
       
       <h2>Les types de variables</h2>
@@ -44,7 +44,7 @@
         <li>Null</li>
         <li>Undefined</li>
         <li>Objet</li>
-        <li>Function</li>
+        <li>Fonction</li>
       </ul>
       <p><b>Exemples :</b></p>
       <pre class="language-js"><code>
@@ -71,7 +71,7 @@
       maCle1: "ma valeur 1",
       maCle2: "ma valeur 2",
       maCle3: "ma valeur 3",
-  }; // Initialisation de l'objet, comprenant 3 variables, accessibles via une clé en chaîne de caractère. Dans ce cas, on peut dire que ces variables sont des attributs de l'objet
+  }; // Initialisation de l'objet, comprenant 3 variables, accessibles via une clé en chaîne de caractère. Dans ce cas, on peut dire que ces variables sont des propriétés de l'objet
   myObject.maCle1 = "ma nouvelle valeur 1"; // Modification de la première variable (propriété)
   console.log(myObject.maCle1); // Affiche : "ma nouvele valeur 1". On accède à la valeur grâce à la clé associée (au nom de la propriété)
 
@@ -85,7 +85,10 @@
       </code></pre>
       
       <h3>Récapitulatif</h3>
-      <p>Une variable a donc : un type de déclaration, un type de donnée, et une valeur.</p>
+      <div class="alert alert-success">
+        <p>Une variable a donc : un type de déclaration, un type de donnée, et une valeur.</p>
+        <p>Une variable peut être : déclarée, modifiée, et lue.</p>
+      </div>
       <p><b>Exemples :</b></p>
       <pre class="language-js"><code>
   const firstname = "Jean";
