@@ -13,7 +13,7 @@
       <h1>Les variables</h1>
       <p>Fiche à imprimer ou recopier.</p>
       <h2>Les types de déclarations</h2>
-      <p>//!\\ Les types de déclarations sont différents des types de données (cf partie suivante) !</p>
+      <p class="alert alert-warning">Les <b>types de déclarations</b> sont différents des <b>types de données</b> (cf partie suivante) !</p>
       <p>Il existe trois types de déclarations de variable en JavaScript :</p>
       <ul>
         <li><b>let</b> : la plus utilisée</li>
@@ -22,17 +22,17 @@
       </ul>
       <p><b>Exemples :</b></p>
       <pre class="language-js"><code>
-        let myVar; // Initialiser la variable sans lui attribuer de valeur
-        let myVar2 = "ma première variable"; // Initialiser la variable en lui attribuant une valeur
-        myVar = "ma seconde variable"; // Modification de la variable myVar. Sa valeur n'est plus null.
-        myVar2 = "je modifie ma première variable"; // Modification de la variable myVar2
-        let myNumber = 2.5;
-        let myBoolean = true;
-        
-        const myConst = "ma première constante"; // Initialiser la constante en lui attribuant une valeur (c'est obligatoire pour une constante)
-        myConst = "cela va générer une erreur"; // Il n'est pas possible de modifier une constante. Le script s'arrêtera ici et affichera une erreur dans la console.
-        const myNumberConst = 3.4;
-        const myBoolean = false;
+  let myVar; // Initialiser la variable sans lui attribuer de valeur
+  let myVar2 = "ma première variable"; // Initialiser la variable en lui attribuant une valeur
+  myVar = "ma seconde variable"; // Modification de la variable myVar. Sa valeur n'est plus null.
+  myVar2 = "je modifie ma première variable"; // Modification de la variable myVar2
+  let myNumber = 2.5;
+  let myBoolean = true;
+
+  const myConst = "ma première constante"; // Initialiser la constante en lui attribuant une valeur (c'est obligatoire pour une constante)
+  myConst = "cela va générer une erreur"; // Il n'est pas possible de modifier une constante. Le script s'arrêtera ici et affichera une erreur dans la console.
+  const myNumberConst = 3.4;
+  const myBoolean = false;
       </code></pre>
       
       <h2>Les types de variables</h2>
@@ -48,101 +48,101 @@
       </ul>
       <p><b>Exemples :</b></p>
       <pre class="language-js"><code>
-        let myString = "ceci est une chaîne de caractère";
-        let myString2 = "12";
-        let myNumber = 15;
-        let myNumber2 = 15.34;
-        let myBoolean = true;
-        let myBoolean2 = false;
-        let myNull = null;
-        let myUndefined = undefined;
-        let myFunc = function(){
-          console.log("hello");
-        };
-        
-        console.log(typeof myString); // Permet de vérifier le type de donnée
+  let myString = "ceci est une chaîne de caractère";
+  let myString2 = "12";
+  let myNumber = 15;
+  let myNumber2 = 15.34;
+  let myBoolean = true;
+  let myBoolean2 = false;
+  let myNull = null;
+  let myUndefined = undefined;
+  let myFunc = function(){
+    console.log("hello");
+  };
+
+  console.log(typeof myString); // Permet de vérifier le type de donnée
       </code></pre>
       
       <h3>Les objets</h3>
       <p>Un objet peut être vu comme un ensemble de variables. Chacune d'elle étant accessible via une "clé". Une clé peut être une chaîne de caractères ou un nombre.</p>
       <p><b>Exemples :</b></p>
       <pre class="language-js"><code>
-        let myObject = {
-            maCle1: "ma valeur 1",
-            maCle2: "ma valeur 2",
-            maCle3: "ma valeur 3",
-        }; // Initialisation de l'objet, comprenant 3 variables, accessibles via une clé en chaîne de caractère. Dans ce cas, on peut dire que ces variables sont des attributs de l'objet
-        myObject.maCle1 = "ma nouvelle valeur 1"; // Modification de la première variable (propriété)
-        console.log(myObject.maCle1); // Affiche : "ma nouvele valeur 1". On accède à la valeur grâce à la clé associée (au nom de la propriété)
-        
-        let myArray = [
-          "ma valeur 1",
-          "ma valeur 2",
-          "ma valeur 3",
-        ]; // Initialisation d'un tableau, comprenant 3 variables, accessibles via une clé en nombre
-        myArray[0] = "ma nouvelle valeur 1"; // Modification de la première variable
-        console.log(myArray[0]); // Affiche : "ma nouvele valeur 1". On accède à la valeur grâce à la clé associée
+  let myObject = {
+      maCle1: "ma valeur 1",
+      maCle2: "ma valeur 2",
+      maCle3: "ma valeur 3",
+  }; // Initialisation de l'objet, comprenant 3 variables, accessibles via une clé en chaîne de caractère. Dans ce cas, on peut dire que ces variables sont des attributs de l'objet
+  myObject.maCle1 = "ma nouvelle valeur 1"; // Modification de la première variable (propriété)
+  console.log(myObject.maCle1); // Affiche : "ma nouvele valeur 1". On accède à la valeur grâce à la clé associée (au nom de la propriété)
+
+  let myArray = [
+    "ma valeur 1",
+    "ma valeur 2",
+    "ma valeur 3",
+  ]; // Initialisation d'un tableau, comprenant 3 variables, accessibles via une clé en nombre
+  myArray[0] = "ma nouvelle valeur 1"; // Modification de la première variable
+  console.log(myArray[0]); // Affiche : "ma nouvele valeur 1". On accède à la valeur grâce à la clé associée
       </code></pre>
       
       <h3>Récapitulatif</h3>
       <p>Une variable a donc : un type de déclaration, un type de donnée, et une valeur.</p>
       <p><b>Exemples :</b></p>
       <pre class="language-js"><code>
-        const firstname = "Jean";
-        let age = 20;
-        const isMajor = age >= 18;
-        let friends = ["Jacques", "Pierre", "Paul"];
-        let work = {
-          company: "OpenClassrooms",
-          job: "student",
-          from: "2021-01-01",
-        };
-        
-        // Qu'afficheront ces logs ?
-        console.log(firstname);
-        console.log(typeof firstname);
-        console.log(typeof age);
-        console.log(isMajor);
-        console.log(friends[1]);
-        console.log(friends.length);
-        console.log(typeof work);
-        console.log(work.job);
+  const firstname = "Jean";
+  let age = 20;
+  const isMajor = age >= 18;
+  let friends = ["Jacques", "Pierre", "Paul"];
+  let work = {
+    company: "OpenClassrooms",
+    job: "student",
+    from: "2021-01-01",
+  };
+
+  // Qu'afficheront ces logs ?
+  console.log(firstname);
+  console.log(typeof firstname);
+  console.log(typeof age);
+  console.log(isMajor);
+  console.log(friends[1]);
+  console.log(friends.length);
+  console.log(typeof work);
+  console.log(work.job);
       </code></pre>
       
       <p><b>Exercice :</b></p>
       <p>Un objet peut en contenir d'autres...</p>
       <pre class="language-js"><code>
-        // Soit l'objet suivant :
-        const Person = {
-          firstname: "Jean",
-          age: 20,
-          friends: ["Jacques", "Pierre", "Paul"]
-          currentWork: {
-            company: "OpenClassrooms",
-            job: "Étudiant",
-            from: "2021-01-01",
-          },
-          previousWorks: [
-            {
-              company: "EDF",
-              job: "Développeur",
-              from: "2020-06-01",
-              to: "2021-01-01",
-            },
-            {
-              company: "SFR",
-              job: "Stagiaire",
-              from: "2020-01-01",
-              to: "2020-06-01",
-            },
-          ]
-        };
-        
-        // Ecrire le code permettant d'afficher :
-        // - L'âge
-        // - Le nombre d'amis
-        // - Le nom de l'entreprise actuelle
-        // - Le nom du poste occupé lorsqu'il travaillait chez SFR
+  // Soit l'objet suivant :
+  const Person = {
+    firstname: "Jean",
+    age: 20,
+    friends: ["Jacques", "Pierre", "Paul"]
+    currentWork: {
+      company: "OpenClassrooms",
+      job: "Étudiant",
+      from: "2021-01-01",
+    },
+    previousWorks: [
+      {
+        company: "EDF",
+        job: "Développeur",
+        from: "2020-06-01",
+        to: "2021-01-01",
+      },
+      {
+        company: "SFR",
+        job: "Stagiaire",
+        from: "2020-01-01",
+        to: "2020-06-01",
+      },
+    ]
+  };
+
+  // Ecrire le code permettant d'afficher :
+  // - L'âge
+  // - Le nombre d'amis
+  // - Le nom de l'entreprise actuelle
+  // - Le nom du poste occupé lorsqu'il travaillait chez SFR
       </code></pre>
     </main>
 
