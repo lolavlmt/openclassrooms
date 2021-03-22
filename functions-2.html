@@ -36,6 +36,10 @@
       <h2>Exercices</h2>
       <p>Le code html de base sera toujours le suivant :</p>
       <pre class="language-markup"><code>
+  &lt;div id="element1"&gt;Element 1&lt;/div&gt;
+  &lt;div id="element2"&gt;Element 2&lt;/div&gt;
+  &lt;div id="element3"&gt;Element 3&lt;/div&gt;
+      
   &lt;form action="#" id="myForm" &gt;
     &lt;label for="firstname"&gt;
       Firstname :
@@ -45,26 +49,44 @@
       Lastname :
       &lt;input type="text" name="lastname" id="lastname" /&gt;
     &lt;/label&gt;
+    &lt;label for="email"&gt;
+      Email :
+      &lt;input type="email" name="email" id="email" /&gt;
+    &lt;/label&gt;
     &lt;input type="submit" value="Ok" /&gt;
   &lt;/form&gt;
       </code></pre>
 
       <h3>Exercice 1</h3>
-      <p>Code à améliorer :</p>
+      <p>Code à améliorer, grâce à une boucle for :</p>
       <pre class="language-js"><code>
-  document.getElementById('myForm').addEventListener('submit', mySubmit);
-  function mySubmit() {
-  }
+  console.log(document.getElementsByTagName('input')[0].value);
+  console.log(document.getElementsByTagName('input')[1].value);
+  console.log(document.getElementsByTagName('input')[2].value);
       </code></pre>
       
       <h3>Exercice 2</h3>
-      <p>Code à améliorer :</p>
+      <p>Code à améliorer, grâce à la boucle for précédente et un switch :</p>
       <pre class="language-js"><code>
-  document.getElementById('element1').style.color = "red";
-
-  document.getElementById('element2').style.color = "red";
-
-  document.getElementById('element3').style.color = "red";
+  document.getElementById('myForm').addEventListener('submit', mySubmit);
+  function mySubmit() {
+    const inputs = document.getElementsByTagName('input');
+    if (document.getElementsByTagName('input')[0].value == "") {
+      console.log(document.getElementsByTagName('input')[0].value);
+    } else if (document.getElementsByTagName('input')[1].value == "") {
+      console.log(document.getElementsByTagName('input')[1].value);
+    } else if (document.getElementsByTagName('input')[2].value == "") {
+      console.log(document.getElementsByTagName('input')[2].value);
+    }
+  }
+  document.getElementById('myForm').addEventListener('submit', mySubmit);
+  function mySubmit() {
+    const 
+    if (document.querySelectorAll('input')[0].type === "text") {
+    } else 
+    console.log(document.querySelectorAll('input[type="text"]')[0].value);
+    console.log(document.querySelectorAll('input[type="text"]')[1].value);
+  }
       </code></pre>
       
       <h3>Exercice 3</h3>
