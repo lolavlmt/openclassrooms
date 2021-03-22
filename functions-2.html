@@ -32,54 +32,29 @@
   display('Jacques');
   display('Pierre');
       </code></pre>
-      <h3>Conseils</h3>
-      <p><strong>Etape 1 :</strong></p>
-      <p>Bien observer les éléments communs à chaque ligne (en vert ci-dessous), et ceux qui diffèrent (en rouge).</p>
-      <code>
-  <span style="color: green">console.log('</span><span style="color: red">Jean</span><span style="color: green"> a 10ans');</span><br />
-  <span style="color: green">console.log('</span><span style="color: red">Jacques</span><span style="color: green"> a 10ans');</span><br />
-  <span style="color: green">console.log('</span><span style="color: red">Pierre</span><span style="color: green"> a 10ans');</span><br />
-      </code>
-      <p><strong>Etape 2 :</strong></p>
-      <p>Créer une fonction, et y mettre le code commun</p>
-      <pre class="language-js"><code>
-  function display() {
-    console.log(' a 10ans');
-  }
-      </code></pre>
-      <p><strong>Etape 3 :</strong></p>
-      <p>Remplacer le code qui diffère, par un paramètre</p>
-      <pre class="language-js"><code>
-  function display(name) {
-    console.log(name+' a 10ans');
-  }
-      </code></pre>
-      <p><strong>Etape 4 :</strong></p>
-      <p>Appeler la fonction pour qu'elle soit exécutée, avec les bons paramètres</p>
-      <pre class="language-js"><code>
-  function display(name) {
-    console.log(name+' a 10ans');
-  }
-  display('Jean');
-  display('Jacques');
-  display('Pierre');
-      </code></pre>
-      <p>Il faudra appliquer cette <b><u>même méthodologie</u></b> sur chacun des exercices suivants.</p>
-      
+
       <h2>Exercices</h2>
       <p>Le code html de base sera toujours le suivant :</p>
       <pre class="language-markup"><code>
-  &lt;div id="element1"&gt;Element 1&lt;/div&gt;
-  &lt;div id="element2"&gt;Element 2&lt;/div&gt;
-  &lt;div id="element3"&gt;Element 3&lt;/div&gt;
+  &lt;form action="#" id="myForm" &gt;
+    &lt;label for="firstname"&gt;
+      Firstname :
+      &lt;input type="text" name="firstname" id="firstname" /&gt;
+    &lt;/label&gt;
+    &lt;label for="lastname"&gt;
+      Lastname :
+      &lt;input type="text" name="lastname" id="lastname" /&gt;
+    &lt;/label&gt;
+    &lt;input type="submit" value="Ok" /&gt;
+  &lt;/form&gt;
       </code></pre>
 
       <h3>Exercice 1</h3>
       <p>Code à améliorer :</p>
       <pre class="language-js"><code>
-  document.getElementById('element1').innerHTML = "1er changement de texte";
-  document.getElementById('element1').innerHTML = "2ème changement de texte";
-  document.getElementById('element1').innerHTML = "3ème changement de texte";
+  document.getElementById('myForm').addEventListener('submit', mySubmit);
+  function mySubmit() {
+  }
       </code></pre>
       
       <h3>Exercice 2</h3>
