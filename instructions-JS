@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Décomposer et comprendre une instruction JS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Décomposer et comprendre une instruction JS</h1>
+      <h2>Introduction</h2>
+      <p>Le javascript est un language, tout comme le français. On peut donc essayer de faire certains parallèles.<br />
+        Voici deux phrases en Français : "Le chien(1) est de taille(2) moyenne(3). Il mange(4) de la nourriture(5)".<br />
+        Et comment on pourrai les décomposer :</p>
+      <ol>
+        <li>Sujet</li>
+        <li>Caractéristique</li>
+        <li>Adjectif</li>
+        <li>Verbe d'action</li>
+        <li>Complément d'objet</li>
+      </ol>
+
+      <p>La traduction de ces phrases en JS serai :</p>
+      <pre class="language-js"><code>
+theDog.size = "medium";
+theDog.eat("food");
+      </code></pre>
+      <p>Et la décomposition se nommerai ainsi :</p>
+      <ol>
+        <li>Variable</li>
+        <li>Attribut</li>
+        <li>Valeur</li>
+        <li>Fonction</li>
+        <li>Paramètre</li>
+      </ol>
+
+      <p>Il arrive qu'en JS, la fonction représente à la fois le verbe d'action + le complément d'objet.<br />
+      Par exemple : Il(1) mange de la nourriture(2) froide(3).<br />
+      En JS :</p>
+      <pre class="language-js"><code>
+        theDog.eatFood("cold");
+      </code></pre>
+      <p>Ici, le chien mange toujours de la nourriture, ce n'est pas utile de passe "food" en paramètre.</p>
+      
+      <p>Ces phrases sont affirmatives. La traduction en JS que l'on vient de faire, correspond au mode "écriture" (on modifie la valeur de la propriété).<br />
+      Lorsque la phrase est à l'interrogative, on passe en mode "lecture".<br />
+      Par exemple : Quelle est la taille du chien ?<br />
+      Traduction JS :</p>
+      <pre class="language-js"><code>
+  console.log(dog.size);
+  // ou bien
+  let size = dog.size; // Pour les exercices suivant, on utilisera cette écriture plutôt que celle du console.log ci-dessus.
+      </code></pre>
+
+      <p>Une autre équivalence que l'on peut trouver entre le français et le JS, est celle du "complément du nom".<br />
+      Par exemple : Le chien(1) de mon ami(2) est de taille moyenne.</p>
+      <ol>
+        <li>Sujet</li>
+        <li>Complément du nom</li>
+      </ol>
+      <p>Traduction JS :</p>
+      <pre class="language-js"><code>
+  myfriend.dog.size = "medium";
+      </code></pre>
+      <ol>
+        <li>Variable</li>
+        <li>Propriété</li>
+      </ol>
+
+      <h2>Exercices</h2>
+      <p>Dans les prochains exercices, il y aura 2 phrases en français, et 1 instruction JS.<br />
+      Il faudra annoter les 2 phrases données a) et b) avec des numéros (1, 2, ... comme dans les exemples ci-dessus), et indiquer à quoi correspondent les numéros (Sujet, Verbe, etc).<br />
+      Puis, dans un second temps, il faudra traduire ces 2 phrases distinctes en code JS. On ne cherche pas ici à produire du code "réaliste", on cherche à bien identifier les éléments qui construisent une instruction, et comment on les assemble entre eux.<br />
+      À partir de l'instruction JS c), il sera demandé de faire l'exercice en sens inverse : Il faudra l'annoter et donner les termes JS correspondant (Variable, Attribut, etc). Pour finir, il faudra traduire cette instruction en français.</p>
+
+      <h3>Exercice 1 :</h3>
+      <p>
+          a) La voiture est de couleur rouge.<br />
+          b) La div est de couleur bleue.<br />
+          c) input.width = 100px;
+      </p>
+
+      <h3>Exercice 2 :</h3>
+      <p>
+          La voiture se déplace.<br />
+          La div apparait.<br />
+          input.updateWidth();
+      </p>
+
+      <h3>Exercice 3 :</h3>
+      <p>
+          La voiture se déplace à droite.<br />
+          La div change de texte en "hello".<br />
+          input.updateWidth(100);
+      </p>
+
+      <h3>Exercice 4 :</h3>
+      <p>
+          Quelle est la couleur de la voiture ?<br />
+          Quelle est la couleur de la div ?<br />
+          let width = input.width;
+      </p>
+
+      <h3>Exercice 5 :</h3>
+      <p>
+          La voiture de mon ami se déplace.<br />
+          La div du header apparait.<br />
+          form.input.updateWidth()
+      </p>
+
+      <h3>Exercice 6 :</h3>
+      <p>
+          La voiture de mon ami se déplace à droite.<br />
+          La div du header change de texte en "world".<br />
+          form.input.updateWidth(100)
+      </p>
+
+      <h3>Exercice 7 :</h3>
+      <p>
+          En prenant un peu de recul, et en utilisant tes connaissances en JS, traduit ces instructions :<br />
+          a) Quel est l'élément html qui a pour id "element1" ?<br />
+          b) Le fond de cet element est jaune.<br />
+          c) Cet element change de fond en rouge. (Faire uniquement l'appel à la fonction)
+      </p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  </body>
+</html>
