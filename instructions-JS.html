@@ -13,9 +13,9 @@
       <h1>Décomposer et comprendre une instruction JS</h1>
       <h2>Introduction</h2>
       <p>Le javascript est un language, tout comme le français. On peut donc essayer de faire certains parallèles.<br />
-        Voici deux phrases en Français : "Le chien(1) est de taille(2) moyenne(3). Il mange(4) de la nourriture(5)".<br />
+        Voici deux phrases en Français : <span class="text-info">"Le chien(1) est de taille(2) moyenne(3). Il mange(4) de la nourriture(5)"</span>.<br />
         Et comment on pourrai les décomposer :</p>
-      <ol>
+      <ol class="text-info">
         <li>Sujet</li>
         <li>Caractéristique</li>
         <li>Adjectif</li>
@@ -29,7 +29,7 @@ theDog.size = "medium";
 theDog.eat("food");
       </code></pre>
       <p>Et la décomposition se nommerai ainsi :</p>
-      <ol>
+      <ol class="text-danger">
         <li>Variable</li>
         <li>Attribut</li>
         <li>Valeur</li>
@@ -38,16 +38,16 @@ theDog.eat("food");
       </ol>
 
       <p>Il arrive qu'en JS, la fonction représente à la fois le verbe d'action + le complément d'objet.<br />
-      Par exemple : Il(1) mange de la nourriture(2) froide(3).<br />
+        Par exemple : <span class="text-info">Il(1) mange de la nourriture(2) froide(3).</span><br />
       En JS :</p>
       <pre class="language-js"><code>
         theDog.eatFood("cold");
       </code></pre>
       <p>Ici, le chien mange toujours de la nourriture, ce n'est pas utile de passe "food" en paramètre.</p>
       
-      <p>Ces phrases sont affirmatives. La traduction en JS que l'on vient de faire, correspond au mode "écriture" (on modifie la valeur de la propriété).<br />
-      Lorsque la phrase est à l'interrogative, on passe en mode "lecture".<br />
-      Par exemple : Quelle est la taille du chien ?<br />
+      <p>Ces phrases sont <span class="text-info">affirmatives</span>. La traduction en JS que l'on vient de faire, correspond au mode <span class="text-danger">"écriture"</span> (on modifie la valeur de la propriété).<br />
+        Lorsque la phrase est à l'<span class="text-info">interrogative</span>, on passe en mode <span class="text-danger">"lecture"</span>.<br />
+        Par exemple : <span class="text-info">Quelle est la taille du chien ?</span><br />
       Traduction JS :</p>
       <pre class="language-js"><code>
   console.log(dog.size);
@@ -56,8 +56,8 @@ theDog.eat("food");
       </code></pre>
 
       <p>Une autre équivalence que l'on peut trouver entre le français et le JS, est celle du "complément du nom".<br />
-      Par exemple : Le chien(1) de mon ami(2) est de taille moyenne.</p>
-      <ol>
+        Par exemple : <span class="text-info">Le chien(1) de mon ami(2) est de taille moyenne.</span></p>
+      <ol class="text-info">
         <li>Sujet</li>
         <li>Complément du nom</li>
       </ol>
@@ -65,7 +65,7 @@ theDog.eat("food");
       <pre class="language-js"><code>
   myfriend.dog.size = "medium";
       </code></pre>
-      <ol>
+      <ol class="text-danger">
         <li>Variable</li>
         <li>Propriété</li>
       </ol>
@@ -84,17 +84,17 @@ theDog.eat("food");
       </p>
       <p class="text-success">Solution attendue :</p>
       <p>
-        a) La maison(1) est de forme(2) carrée(3).<br />
+        <b>a) La maison(1) est de forme(2) carrée(3).</b><br />
         1. Sujet<br />
         2. Caractéristique<br />
         3. Adjectif<br />
-        Traduction JS : house.forme = "square";<br />
-        b) ...<br />
-        c) footer(1).opacity(2) = 1(3);<br />
+        <u>Traduction JS :</u> house.forme = "square";<br />
+        <b>b) ...</b><br />
+        <b>c) footer(1).opacity(2) = 1(3);</b><br />
         1. Variable<br />
         2. Attribut<br />
         3. Valeur<br />
-        Traduction Fr : Le pied de page a une opacité de 1;
+        <u>Traduction Fr :</u> Le pied de page a une opacité de 1;
       </p>
 
       <h3>Exercice 1 :</h3>
