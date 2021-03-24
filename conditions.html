@@ -12,12 +12,19 @@
     <main class="container">
       <h1>Exercices sur les conditions</h1>
       <h2>Introduction</h2>
-      <p>Voici un rappel des opérateurs :</p>
-      <p>Soit la variable : <code class="language-js">let myVar = 12;</code></p>
-      
+      <p>Voici un rappel des opérateurs de comparaison et des opérateurs logique.</p>
+      <h3>Opérateurs de comparaison</h3>
       <table class="table table-bordered align-middle">
+        <thead>
           <tr>
-              <th class="text-center" style="min-width: 100px;">==</th>
+              <th class="text-center" style="min-width: 100px;">Opérateur</th>
+              <th class="text-center">Description</th>
+              <th class="text-center"><p>Soit la variable : <code class="language-js">let myVar = 12;</code></p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <th class="text-center">==</th>
               <td>pour tester l'égalité. Il faut doubler le = pour le différencier de la déclaration des variables.</td>
               <td>
                   <pre class="language-js"><code>
@@ -88,14 +95,83 @@
                   </code></pre>
               </td>
           </tr>
+        </tbody>
       </table>
-    
+
+      <h3>Opérateurs logiques</h3>
+      <table class="table table-bordered align-middle">
+        <thead>
+          <tr>
+              <th class="text-center" style="min-width: 100px;">Opérateur</th>
+              <th class="text-center">Description</th>
+              <th class="text-center"><p>Soit les variables : <code class="language-js">let varTrue = true; let varFalse = false;</code></p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <th class="text-center">&&</th>
+              <td>ET. Les 2 valeurs doivent être à "true", pour que le résultat soit "true".</td>
+              <td>
+                  <pre class="language-js"><code>
+  let result1 = varTrue && varFalse;
+  let result2 = varTrue && true;
+  let result3 = false && varTrue;
+  console.log(result1, result2, result3); // false  true  false
+                  </code></pre>
+              </td>
+          </tr>
+          <tr>
+              <th class="text-center">||</th>
+              <td>OU. Au moins une des 2 valeurs doit être égale à "true", pour que le résultat soit "true".</td>
+              <td>
+                  <pre class="language-js"><code>
+  let result1 = varTrue || varFalse;
+  let result2 = varFalse || false;
+  let result3 = varFalse || true;
+  console.log(result1, result2, result3); // true  false  true
+                  </code></pre>
+              </td>
+          </tr>
+          <tr>
+              <th class="text-center">!</th>
+              <td>NON. Inverse le résultat.</td>
+              <td>
+                  <pre class="language-js"><code>
+  let result1 = !varTrue;
+  let result2 = !varFalse;
+  let result3 = !(varTrue && varFalse);
+  console.log(result1, result2, result3); // false  true  true
+                  </code></pre>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+
       <h2>Exercices</h2>
-      <p>Le code html de base sera toujours le suivant :</p>
-      <pre class="language-markup"><code>
-  &lt;div id="element1"&gt;Element 1&lt;/div&gt;
-  &lt;div id="element2"&gt;Element 2&lt;/div&gt;
-  &lt;div id="element3"&gt;Element 3&lt;/div&gt;
+      <p>Les variables seront toujours les suivants :</p>
+      <pre class="language-js"><code>
+
+let myVar1 = 15;
+let myVar2 = 39;
+let myVar3 = 54;
+
+let result1 = myVar1 < myVar2;
+let result2 = myVar2 > myVar3;
+let result4 = myVar1 <= myVar2 + myVar3;
+let result3 = myVar2 >= myVar1 + myVar3;
+let result5 = myVar1 + myVar2 <= myVar3;
+let result6 = myVar3 - myVar1 == myVar1;
+
+let result7 = result1 && result2;
+let result8 = result2 || result3;
+let result9 = result4 && result5 && result6;
+let result10 = result4 && result5 || result6;
+let result11 = result4 || result5 || result6;
+
+
+
+// Qu'afficheront ces logs ?
+console.log(myVar1 > );
       </code></pre>
 
       <h3>Exercice 1</h3>
