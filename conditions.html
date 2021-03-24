@@ -12,60 +12,87 @@
     <main class="container">
       <h1>Exercices sur les conditions</h1>
       <h2>Introduction</h2>
-      <p>Pour chaque exercice, il faudra créer une fonction pour éviter les duplications de code.</p>
-      <p>Aucune recherche Google ou autre n'est nécessaire. Son utilisation est donc <b>interdite</b>.</p>
-
-      <p><strong>Voici un exemple de consigne :</strong></p>
-      <p>Code à améliorer :</p>
+      <p>Voici un rappel des opérateurs :</p>
+      <p>Soit la variable : </p>
       <pre class="language-js"><code>
-  console.log('Jean a 10ans');
-  console.log('Jacques a 10ans');
-  console.log('Pierre a 10ans');
+        let myVar = 12;
       </code></pre>
-
-      <p><strong>Voici un exemple de solution attendue :</strong></p>
-      <pre class="language-js"><code>
-  function display(name) {
-    console.log(name+' a 10ans');
-  }
-  display('Jean');
-  display('Jacques');
-  display('Pierre');
-      </code></pre>
-      <h3>Conseils</h3>
-      <p><strong>Etape 1 :</strong></p>
-      <p>Bien observer les éléments communs à chaque ligne (en vert ci-dessous), et ceux qui diffèrent (en rouge).</p>
-      <code>
-  <span style="color: green">console.log('</span><span style="color: red">Jean</span><span style="color: green"> a 10ans');</span><br />
-  <span style="color: green">console.log('</span><span style="color: red">Jacques</span><span style="color: green"> a 10ans');</span><br />
-  <span style="color: green">console.log('</span><span style="color: red">Pierre</span><span style="color: green"> a 10ans');</span><br />
-      </code>
-      <p><strong>Etape 2 :</strong></p>
-      <p>Créer une fonction, et y mettre le code commun</p>
-      <pre class="language-js"><code>
-  function display() {
-    console.log(' a 10ans');
-  }
-      </code></pre>
-      <p><strong>Etape 3 :</strong></p>
-      <p>Remplacer le code qui diffère, par un paramètre</p>
-      <pre class="language-js"><code>
-  function display(name) {
-    console.log(name+' a 10ans');
-  }
-      </code></pre>
-      <p><strong>Etape 4 :</strong></p>
-      <p>Appeler la fonction pour qu'elle soit exécutée, avec les bons paramètres</p>
-      <pre class="language-js"><code>
-  function display(name) {
-    console.log(name+' a 10ans');
-  }
-  display('Jean');
-  display('Jacques');
-  display('Pierre');
-      </code></pre>
-      <p>Il faudra appliquer cette <b><u>même méthodologie</u></b> sur chacun des exercices suivants.</p>
       
+      <table>
+          <tr>
+              <th>==</th>
+              <td>pour tester l'égalité. Il faut doubler le = pour le différencier de la déclaration des variables.</td>
+              <td>
+                  <pre class="language-js"><code>
+                      let result1 = myVar == 12;
+                      let result2 = myVar == 35;
+                      let result3 = myVar == 8;
+                      console.log(result1, result2, result3); // true  false  false
+                  </code></pre>
+              </td>
+          </tr>
+          <tr>
+              <th>!=</th>
+              <td>différent de</td>
+              <td>
+                  <pre class="language-js"><code>
+                      let result1 = myVar != 12;
+                      let result2 = myVar != 35;
+                      let result3 = myVar != 8;
+                      console.log(result1, result2, result3); // false  true  true
+                  </code></pre>
+              </td>
+          </tr>
+          <tr>
+              <th><</th>
+              <td>strictement inférieur</td>
+              <td>
+                  <pre class="language-js"><code>
+                      let result1 = myVar < 12;
+                      let result2 = myVar < 35;
+                      let result3 = myVar < 8;
+                      console.log(result1, result2, result3); // false  true  false
+                  </code></pre>
+              </td>
+          </tr>
+          <tr>
+              <th><=</th>
+              <td>inférieur ou égal</td>
+              <td>
+                  <pre class="language-js"><code>
+                      let result1 = myVar <= 12;
+                      let result2 = myVar <= 35;
+                      let result3 = myVar <= 8;
+                      console.log(result1, result2, result3); // true  true  false
+                  </code></pre>
+              </td>
+          </tr>
+          <tr>
+              <th>></th>
+              <td>strictement supérieur</td>
+              <td>
+                  <pre class="language-js"><code>
+                      let result1 = myVar > 12;
+                      let result2 = myVar > 35;
+                      let result3 = myVar > 8;
+                      console.log(result1, result2, result3); // false  false  true
+                  </code></pre>
+              </td>
+          </tr>
+          <tr>
+              <th>>=</th>
+              <td>supérieur ou égal</td>
+              <td>
+                  <pre class="language-js"><code>
+                      let result1 = myVar >= 12;
+                      let result2 = myVar >= 35;
+                      let result3 = myVar >= 8;
+                      console.log(result1, result2, result3); // true  false  true
+                  </code></pre>
+              </td>
+          </tr>
+      </table>
+    
       <h2>Exercices</h2>
       <p>Le code html de base sera toujours le suivant :</p>
       <pre class="language-markup"><code>
