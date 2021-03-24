@@ -19,7 +19,7 @@
           <tr>
               <th class="text-center" style="min-width: 100px;">Opérateur</th>
               <th class="text-center">Description</th>
-              <th class="text-center"><p>Soit la variable : <code class="language-js">let myVar = 12;</code></p></th>
+              <th class="text-center"><p>Exemple avec la variable : <code class="language-js">let myVar = 12;</code></p></th>
           </tr>
         </thead>
         <tbody>
@@ -104,7 +104,7 @@
           <tr>
               <th class="text-center" style="min-width: 100px;">Opérateur</th>
               <th class="text-center">Description</th>
-              <th class="text-center"><p>Soit les variables : <code class="language-js">let varTrue = true; let varFalse = false;</code></p></th>
+              <th class="text-center"><p>Exemple avec les variables : <code class="language-js">let varTrue = true; let varFalse = false;</code></p></th>
           </tr>
         </thead>
         <tbody>
@@ -146,11 +146,37 @@
           </tr>
         </tbody>
       </table>
+      
+      <p class="alert alert-success">
+        Les <span class="text-success">amis</span> de mes <span class="text-success">amis</span> sont mes <span class="text-success">amis</span> : true && true = true.<br />
+        Les <span class="text-success">amis</span> de mes <span class="text-danger">ennemis</span> sont mes <span class="text-danger">ennemis</span> : true && false = false.<br />
+        Les <span class="text-danger">ennemis</span> de mes <span class="text-success">amis</span> sont mes <span class="text-danger">ennemis</span> : false && true = false.<br />
+        Les <span class="text-danger">ennemis</span> de mes <span class="text-danger">ennemis</span> sont mes <span class="text-success">amis</span> : false && false = false.<br />
+      </p>
+      
+      <h3>Les règles de priorité</h3>
+      <p class="alert alert-info">Lorsqu'il y a plusieurs opérateurs logiques, il faut les prendres dans l'ordre, sauf s'il y a des parenthèses.</p>
+      <p>Exemples :</p>
+      <pre class="language-js"><code>
+let result = varFalse && varFalse || varTrue;
+// Décomposons, dans l'ordre :
+let subResult1 = varTrue && varFalse; // false
+let subResult2 = subResult1 || varTrue; // true
+// Donc :
+console.log(result1); // true
+
+// Avec des parenthéses :
+let result = varFalse && (varFalse || varTrue);
+// Décomposons, parenthèses en premier :
+let subResult1 = varFalse || varTrue; // true
+let subResult2 = varFalse && subResult1; // false
+// Donc :
+console.log(result1); // false
+      </code></pre>
 
       <h2>Exercices</h2>
-      <p>Les variables seront toujours les suivants :</p>
+      <p>Décompose autant que nécessaire, et donne le résultat.</p>
       <pre class="language-js"><code>
-
 let myVar1 = 15;
 let myVar2 = 39;
 let myVar3 = 54;
@@ -167,73 +193,9 @@ let result8 = result2 || result3;
 let result9 = result4 && result5 && result6;
 let result10 = result4 && result5 || result6;
 let result11 = result4 || result5 || result6;
+let result12 = result4 || (result5 || result6);
 
-
-
-// Qu'afficheront ces logs ?
-console.log(myVar1 > );
-      </code></pre>
-
-      <h3>Exercice 1</h3>
-      <p>Code à améliorer :</p>
-      <pre class="language-js"><code>
-  document.getElementById('element1').innerHTML = "1er changement de texte";
-  document.getElementById('element1').innerHTML = "2ème changement de texte";
-  document.getElementById('element1').innerHTML = "3ème changement de texte";
-      </code></pre>
-      
-      <h3>Exercice 2</h3>
-      <p>Code à améliorer :</p>
-      <pre class="language-js"><code>
-  document.getElementById('element1').style.color = "red";
-
-  document.getElementById('element2').style.color = "red";
-
-  document.getElementById('element3').style.color = "red";
-      </code></pre>
-      
-      <h3>Exercice 3</h3>
-      <p>Code à améliorer :</p>
-      <pre class="language-js"><code>
-  document.getElementById('element1').innerHTML = "Lorem";
-
-  document.getElementById('element2').innerHTML = "ipsum";
-
-  document.getElementById('element3').innerHTML = "dolor";
-      </code></pre>
-      
-      <h3>Exercice 4</h3>
-      <p>Code à améliorer :</p>
-      <pre class="language-js"><code>
-  document.getElementById('element1').innerHTML = "Lorem";
-  document.getElementById('element1').style.fontWeight = "bold";
-  
-  document.getElementById('element2').innerHTML = "ipsum";
-  document.getElementById('element2').style.fontWeight = "bold";
-  
-  document.getElementById('element3').innerHTML = "dolor";
-  document.getElementById('element3').style.fontWeight = "bold";
-      </code></pre>
-
-      <h3>Exercice 5</h3>
-      <p>Code à améliorer :</p>
-      <pre class="language-js"><code>
-  document.getElementById('element1').innerHTML = "Lorem";
-  document.getElementById('element1').style.color = "red";
-
-  document.getElementById('element2').innerHTML = "ipsum";
-  document.getElementById('element2').style.color = "blue";
-  
-  document.getElementById('element3').innerHTML = "dolor";
-  document.getElementById('element3').style.color = "green";
-      </code></pre>
-      
-      <h3>Exercice 6</h3>
-      <p>Code à améliorer :</p>
-      <pre class="language-js"><code>
-  document.getElementsByTagName('div')[0].style.backgroundColor = "red";
-  document.getElementById('element2').style.backgroundColor = "red";
-  document.getElementById('element3').style.backgroundColor = "red";
+let result12 = myVar2 + myVar3 > myVar1 + myVar3 && result7 || result12;
       </code></pre>
     </main>
 
