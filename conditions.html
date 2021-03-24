@@ -163,7 +163,7 @@ let result = varFalse && varFalse || varTrue;
 let subResult1 = varTrue && varFalse; // false
 let subResult2 = subResult1 || varTrue; // true
 // Donc :
-console.log(result1); // true
+console.log(result); // true
 
 // Avec des parenthéses :
 let result = varFalse && (varFalse || varTrue);
@@ -171,7 +171,7 @@ let result = varFalse && (varFalse || varTrue);
 let subResult1 = varFalse || varTrue; // true
 let subResult2 = varFalse && subResult1; // false
 // Donc :
-console.log(result1); // false
+console.log(result); // false
       </code></pre>
 
       <h2>Exercices</h2>
