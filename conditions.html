@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercices sur les conditions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Exercices sur les conditions</h1>
+      <h2>Introduction</h2>
+      <p>Pour chaque exercice, il faudra créer une fonction pour éviter les duplications de code.</p>
+      <p>Aucune recherche Google ou autre n'est nécessaire. Son utilisation est donc <b>interdite</b>.</p>
+
+      <p><strong>Voici un exemple de consigne :</strong></p>
+      <p>Code à améliorer :</p>
+      <pre class="language-js"><code>
+  console.log('Jean a 10ans');
+  console.log('Jacques a 10ans');
+  console.log('Pierre a 10ans');
+      </code></pre>
+
+      <p><strong>Voici un exemple de solution attendue :</strong></p>
+      <pre class="language-js"><code>
+  function display(name) {
+    console.log(name+' a 10ans');
+  }
+  display('Jean');
+  display('Jacques');
+  display('Pierre');
+      </code></pre>
+      <h3>Conseils</h3>
+      <p><strong>Etape 1 :</strong></p>
+      <p>Bien observer les éléments communs à chaque ligne (en vert ci-dessous), et ceux qui diffèrent (en rouge).</p>
+      <code>
+  <span style="color: green">console.log('</span><span style="color: red">Jean</span><span style="color: green"> a 10ans');</span><br />
+  <span style="color: green">console.log('</span><span style="color: red">Jacques</span><span style="color: green"> a 10ans');</span><br />
+  <span style="color: green">console.log('</span><span style="color: red">Pierre</span><span style="color: green"> a 10ans');</span><br />
+      </code>
+      <p><strong>Etape 2 :</strong></p>
+      <p>Créer une fonction, et y mettre le code commun</p>
+      <pre class="language-js"><code>
+  function display() {
+    console.log(' a 10ans');
+  }
+      </code></pre>
+      <p><strong>Etape 3 :</strong></p>
+      <p>Remplacer le code qui diffère, par un paramètre</p>
+      <pre class="language-js"><code>
+  function display(name) {
+    console.log(name+' a 10ans');
+  }
+      </code></pre>
+      <p><strong>Etape 4 :</strong></p>
+      <p>Appeler la fonction pour qu'elle soit exécutée, avec les bons paramètres</p>
+      <pre class="language-js"><code>
+  function display(name) {
+    console.log(name+' a 10ans');
+  }
+  display('Jean');
+  display('Jacques');
+  display('Pierre');
+      </code></pre>
+      <p>Il faudra appliquer cette <b><u>même méthodologie</u></b> sur chacun des exercices suivants.</p>
+      
+      <h2>Exercices</h2>
+      <p>Le code html de base sera toujours le suivant :</p>
+      <pre class="language-markup"><code>
+  &lt;div id="element1"&gt;Element 1&lt;/div&gt;
+  &lt;div id="element2"&gt;Element 2&lt;/div&gt;
+  &lt;div id="element3"&gt;Element 3&lt;/div&gt;
+      </code></pre>
+
+      <h3>Exercice 1</h3>
+      <p>Code à améliorer :</p>
+      <pre class="language-js"><code>
+  document.getElementById('element1').innerHTML = "1er changement de texte";
+  document.getElementById('element1').innerHTML = "2ème changement de texte";
+  document.getElementById('element1').innerHTML = "3ème changement de texte";
+      </code></pre>
+      
+      <h3>Exercice 2</h3>
+      <p>Code à améliorer :</p>
+      <pre class="language-js"><code>
+  document.getElementById('element1').style.color = "red";
+
+  document.getElementById('element2').style.color = "red";
+
+  document.getElementById('element3').style.color = "red";
+      </code></pre>
+      
+      <h3>Exercice 3</h3>
+      <p>Code à améliorer :</p>
+      <pre class="language-js"><code>
+  document.getElementById('element1').innerHTML = "Lorem";
+
+  document.getElementById('element2').innerHTML = "ipsum";
+
+  document.getElementById('element3').innerHTML = "dolor";
+      </code></pre>
+      
+      <h3>Exercice 4</h3>
+      <p>Code à améliorer :</p>
+      <pre class="language-js"><code>
+  document.getElementById('element1').innerHTML = "Lorem";
+  document.getElementById('element1').style.fontWeight = "bold";
+  
+  document.getElementById('element2').innerHTML = "ipsum";
+  document.getElementById('element2').style.fontWeight = "bold";
+  
+  document.getElementById('element3').innerHTML = "dolor";
+  document.getElementById('element3').style.fontWeight = "bold";
+      </code></pre>
+
+      <h3>Exercice 5</h3>
+      <p>Code à améliorer :</p>
+      <pre class="language-js"><code>
+  document.getElementById('element1').innerHTML = "Lorem";
+  document.getElementById('element1').style.color = "red";
+
+  document.getElementById('element2').innerHTML = "ipsum";
+  document.getElementById('element2').style.color = "blue";
+  
+  document.getElementById('element3').innerHTML = "dolor";
+  document.getElementById('element3').style.color = "green";
+      </code></pre>
+      
+      <h3>Exercice 6</h3>
+      <p>Code à améliorer :</p>
+      <pre class="language-js"><code>
+  document.getElementsByTagName('div')[0].style.backgroundColor = "red";
+  document.getElementById('element2').style.backgroundColor = "red";
+  document.getElementById('element3').style.backgroundColor = "red";
+      </code></pre>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  </body>
+</html>
