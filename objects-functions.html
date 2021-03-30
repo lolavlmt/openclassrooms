@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objets et Fonctions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Objets et Fonctions</h1>
+
+      <h3>Exercice 1</h3>
+      <pre class="language-js"><code>
+  // Soit l'objet suivant :
+  const Person = {
+    firstname: "Jean",
+    age: 20,
+    friends: ["Jacques", "Pierre", "Paul"]
+    currentWork: {
+      company: "OpenClassrooms",
+      job: "Étudiant",
+      from: "2021-01-01",
+    },
+    previousWorks: [
+      {
+        company: "EDF",
+        job: "Développeur",
+        from: "2020-06-01",
+        to: "2021-01-01",
+      },
+      {
+        company: "SFR",
+        job: "Stagiaire",
+        from: "2020-01-01",
+        to: "2020-06-01",
+      },
+    ]
+  };
+      </code></pre>
+      
+      <p>Pour chacune des lignes ci-dessous, créer une fonction "getter" qui retournera l'information demandée, et/ou une fonction "setter" qui la modifiera (voir l'exemple attendu ci-après).</p>
+      <ul>
+        <li>L'âge (getter + setter)</li>
+        <li>Le nombre d'amis (getter)</li>
+        <li>Le nom de l'entreprise actuelle (getter + setter)</li>
+        <li>Le nom du poste occupé lorsqu'il travaillait chez "SFR" (ou autre nom d'entreprise passée en paramètre) (getter + setter)</li>
+        <li>Supprimer l'ami "Pierre" (ou autre nom d'ami passé en paramètre) (setter)</li>
+        <li>Ajouter une précédente expérience professionnelle (setter)</li>
+        <li>Indiquer un nouveau travail actuel (avant cela, passer l'expérience pro actuelle dans les précédentes expériences pro) (setter)</li>
+      </ul>
+
+      <p><b>Exemple</b></p>
+      <pre class="language-js"><code>
+  // - Firstname (getter + setter)
+  function getFirstname(person) { // <= Getter
+    return person.firstname;
+  }
+  function setFirstname(person, newName) { // <= Setter
+    person.firstname = newName;
+    return person;
+  }
+      </code></pre>
+      
+      <h3>Exercice 2</h3>
+      <p></p>
+      <pre class="language-js"><code>
+  // Soit une liste de tâches
+  const tasks = [
+    {
+      id: 1,
+      title: "Corriger le header",
+      estimatedTime: 3, // nombre d'heures
+      owner: null
+    },
+    {
+      id: 2,
+      title: "Faire le responsive",
+      estimatedTime: 6,
+      owner: null
+    },
+    {
+      id: 3,
+      title: "Ajouter le lien vers les CGV",
+      estimatedTime: 1,
+      owner: null
+    },
+    {
+      id: 4,
+      title: "Intégrer le formulaire de contact",
+      estimatedTime: 4,
+      owner: null
+    },
+  ];
+  
+  // Une liste d'employés
+  const employees = ["pierre", "paul", "jacques"];
+      </code></pre>
+      <p>En suivant les étapes ci-dessous, rédiger le code qui répondra aux attentes :</p>
+      <ol>
+        <li>Écrire une fonction permettant d'attribuer une tâche à un employé. Utiliser cette fonction pour attribuer la première tâche à "Pierre".</li>
+        <li>Améliorer la fonction pour vérifier si l'employé n'a pas déjà une tâche associée. Pour vérifier qu'elle fonctionne, rappeler à nouveau cette fonction pour attribuer la seconde tâche à "Pierre".</li>
+        <li>Sachant qu'un employé travaille 7h par jour, améliorer encore la fonction pour voir si l'employé est en capacité de prendre la nouvelle tâche. Sinon, retourner false.</li>
+        <li>Retirer les appels à la fonction précédente (les deux attributions de tâche à "Pierre"). Parcourir le tableau de tâches, et les répartir entre les employés pour qu'elles soient toutes faites en une journée, sans qu'aucun employé ne fasse d'heure supplémentaire.</li>
+      </ol>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  </body>
+</html>
