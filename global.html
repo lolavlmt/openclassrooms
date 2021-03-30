@@ -41,17 +41,20 @@
   };
       </code></pre>
       
-      <p>Pour chacune des lignes ci-dessous, créer une fonction "getter" qui retournera l'information demandée, et une fonction "setter" qui la modifiera (cf exemple attendu ci-après).</p>
+      <p>Pour chacune des lignes ci-dessous, créer une fonction "getter" qui retournera l'information demandée, et/ou une fonction "setter" qui la modifiera (voir l'exemple attendu ci-après).</p>
       <ul>
-        <li>L'âge</li>
-        <li>Le nombre d'amis</li>
-        <li>Le nom de l'entreprise actuelle</li>
-        <li>Le nom du poste occupé lorsqu'il travaillait chez "SFR" (ou autre entreprise passée en paramètre)</li>
+        <li>L'âge (getter + setter)</li>
+        <li>Le nombre d'amis (getter)</li>
+        <li>Le nom de l'entreprise actuelle (getter + setter)</li>
+        <li>Le nom du poste occupé lorsqu'il travaillait chez "SFR" (ou autre nom d'entreprise passée en paramètre) (getter + setter)</li>
+        <li>Supprimer l'ami "Pierre" (ou autre nom d'ami passé en paramètre) (setter)</li>
+        <li>Ajouter une précédente expérience professionnelle (setter)</li>
+        <li>Indiquer un nouveau travail actuel (avant cela, passer l'expérience pro actuelle dans les précédentes expériences pro)</li>
       </ul>
 
-      <p>Exemple</p>
+      <p><b>Exemple</b></p>
       <pre class="language-js"><code>
-  // - Firstname 
+  // - Firstname (getter + setter)
   function getFirstname(person) { // <= Getter
     return person.firstname;
   }
