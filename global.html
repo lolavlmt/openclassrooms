@@ -12,7 +12,7 @@
     <main class="container">
       <h1>Global</h1>
       
-      <h3>Exercice 1</h3>
+      <h2>Exercices</h2>
       <pre class="language-js"><code>
   // Soit l'objet suivant :
   const Person = {
@@ -39,12 +39,26 @@
       },
     ]
   };
+      </code></pre>
+      
+      <p>Pour chacune des lignes ci-dessous, créer une fonction "getter" qui retournera l'information demandée, et une fonction "setter" qui la modifiera (cf exemple attendu ci-après).</p>
+      <ul>
+        <li>L'âge</li>
+        <li>Le nombre d'amis</li>
+        <li>Le nom de l'entreprise actuelle</li>
+        <li>Le nom du poste occupé lorsqu'il travaillait chez "SFR" (ou autre entreprise passée en paramètre)</li>
+      </ul>
 
-  // Ecrire le code permettant d'afficher :
-  // - L'âge
-  // - Le nombre d'amis
-  // - Le nom de l'entreprise actuelle
-  // - Le nom du poste occupé lorsqu'il travaillait chez SFR
+      <p>Exemple</p>
+      <pre class="language-js"><code>
+  // - Firstname 
+  function getFirstname(person) { // <= Getter
+    return person.firstname;
+  }
+  function setFirstname(person, newName) { // <= Setter
+    person.firstname = newName;
+    return person;
+  }
       </code></pre>
     </main>
 
